@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/html png.png" type="img/x-icon"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="all">   
+    <header class="header">
+         <a class="logo" href="index.html">
+            <img src="img/logo.svg" alt="logotype">
+         </a>
+        <div class="burger">
+            <div class="burger_blok"></div>
+            <div class="burger_blok"></div>
+            <div class="burger_blok"></div>
+            <ul class="menu menu_blok">
+                <li class="menu_list"><a class="menu_link "href="index.html">Главная</a></li>
+                <li class="menu_list"><a class="menu_link" href="students.html">Студенты</a></li>
+                <li class="menu_list"><a class="menu_link" href="about.html">О курсе</a></li>
+                <li class="menu_list"><a class="menu_link menu_link_active" href="contacts.html">Контакты</a></li>
+            </ul>  
+        </div>
+            <a class="button" href="#">Войти</a>
+            <div class="block">
+                <h4 class="row">Войти на сайт</h4>
+                <input class="login" type="text" placeholder="Логин">
+                <input class="password" type="text" placeholder="Пароль">
+                <a class="btn">Войти</a>
+                <a class="krestic"><img src="img/krestic.png" alt="крестик"></a>
+            </div>
+    </header>
+    <main class="content">
+        <div class="foto1">
+            <img src="img/photo1.jpg.jpg" alt="фото1">   
+        </div>
+        <div class="family">
+        <h1 class="row2"><b>Кадулина Ольга Анатольевна</b></h1>
+        <p align="justify">Меня зовут Ольга, мне 40 лет, живу в М.О. г.Подольск.<strong><br>В 2003г. Закончила Лебедянский педагогтческий колледж, по специальности "Воспитатель-хореограф". В 2009г. Елецкий Педагогический Университет им. Бунина,по специальности "Cервис и туризм".</strong>
+        <br>Есть дочь Ева, ей 13 лет. Занимается танцами, воздушной гимнастикой на полотнах и конным спортом.
+        <br><i>Сейчас работаю в Москве няней-педагог</i> 
+        <br> Свободное время ствараюсь проводить в кругу семьи и родных. Любим семьей выезжать в парки и кататься на велосипедах. С удовольствием  посещаю театры, концерты и массовые развлекательные мероприяия.
+        </p>
+        </div>
+        <div class="hobby">
+            <h3 class="olga">О себе</h3>
+            <ol>
+                <li>целеустремленная </li>
+                <li>жизнерадостная</li>
+                <li>оптимистичная</li>
+            </ol>
+            <h5 class="olga">Увлечения</h5>
+            <ul>
+                <li>кулинария</li>
+                <li>спорт</li>
+                <li>Ит-технологии</li>
+                <li>плаванье</li>
+            </ul>
+        </div>
+        <table class="iksweb">
+            <table class="iksweb">
+                <tbody>
+                    <tr>
+                        <td><strong>ООО "Митлана"</strong></td>
+                        <td><b>ООО "Маркс"</b></td>
+                        <td><b>ООО "Капитал"</b></td>
+                        <td><b> Климовский ЦЗН </b></td>
+                        <td><b>частные семьи </b></td>
+                    </tr>
+                    <tr>
+                        <td>Операционист </td>
+                        <td>помощник бухгалтера</td>
+                        <td>генеральный директор</td>
+                        <td>помощник главного 
+                        бухгалтера </td>
+                        <td>Няня-педагог</td>
+                    </tr>
+                    <tr>
+                        <td>2003-2005</td>
+                        <td>2005-2006</td>
+                        <td>2007-2009</td>
+                        <td>2012-2014</td>
+                        <td>2015-2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        <div class="contacts">
+            <p><b><em>Контакты</em></b></p>
+            <p>Телефон:+7(916) 410-29-47</p>
+            <p>Почта:<a href="mailto:olgakadulina@mail.ru">olgakadulina@mail.ru</a></p>
+            <p>Телеграм:<a href="@OlgaK_1983">@OlgaK_1983</a></p>
+        </div>
+    </main>
+</div>
+    <footer class="footer"> 
+        <p class="footer_text">2023 &copy; <a class="footer_text"  href="#">учебный центр</a></p>
+    </footer>
+    <script>
+         const buttonEl = document.querySelector('.button');
+         const blockEL = document.querySelector ('.block')
+         buttonEl.addEventListener('click', function (e) {
+            blockEL.classList.toggle('visible');
+        });
+         const burgerEL = document.querySelector('.burger');
+         const menuEL = document.querySelector('.menu');
+         burgerEL.addEventListener('click', function (e){
+            menuEL.classList.toggle('menu_blok');  
+        });
+        const closeIcon = document.querySelector('.krestic')
+         closeIcon.addEventListener('click', function (e) {
+            blockEL.classList.remove('visible');
+        });
+    </script>
+</body>
+            
+</html>

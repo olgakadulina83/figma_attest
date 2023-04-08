@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/html png.png" type="img/x-icon"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="all">   
+        <header class="header">
+             <a class="logo" href="index.html">
+               <img src="img/logo.svg" alt="logotype">
+             </a>
+             <div class="burger">
+              <div class="burger_blok"></div>
+              <div class="burger_blok"></div>
+              <div class="burger_blok"></div>
+              <ul class="menu menu_blok">
+                   <li class="menu_list"><a class="menu_link "href="index.html">Главная</a></li>
+                   <li class="menu_list"><a class="menu_link" href="students.html">Студенты</a></li>
+                   <li class="menu_list"><a class="menu_link menu_link_active" href="about.html">О курсе</a></li>
+                   <li class="menu_list"><a class="menu_link " href="contacts.html">Контакты</a></li>
+               </ul>  
+              </div>
+          <a class="button" href="#">Войти</a>
+          <div class="block">
+            <a button class="krestic">X</a>
+            <h4 class="row">Войти на сайт</h4>
+            <input class="login" type="text" placeholder="Логин">
+            <input class="password" type="text" placeholder="Пароль">
+            <a class="btn">Войти</a>
+          </div>
+        </header>
+       <main class="content">
+         <h2 class="couse">О курсе &#128241;</h2> 
+          <p class="video">Посмотрите видео о нас</p>
+          <iframe class="video-1" width="820" height="560" src="https://www.youtube.com/embed/KwdQk3vyYIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       </main>
+    </div>
+    <footer class="footer"> 
+      <p class="footer_text">2023 &copy; <a class="footer_text"  href="#">учебный центр</a></p>
+    </footer>
+    <script>
+         const buttonEl = document.querySelector('.button');
+         const blockEL = document.querySelector ('.block')
+         buttonEl.addEventListener('click', function (e) {
+         blockEL.classList.toggle('visible');
+         });
+         const burgerEL = document.querySelector('.burger');
+         const menuEL = document.querySelector('.menu');
+         burgerEL.addEventListener('click', function (e){
+         menuEL.classList.toggle('menu_blok');  
+        });
+        const closeIcon = document.querySelector('.krestic')
+         closeIcon.addEventListener('click', function (e) {
+            blockEL.classList.remove('visible');
+        });
+    </script>
+</body>
+            
+</html>
